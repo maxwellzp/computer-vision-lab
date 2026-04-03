@@ -1,9 +1,16 @@
 import cv2 as cv
 
+WIDTH = 1280
+HEIGHT = 720
+FPS = 30
 
 def read_video_from_webcam(camera_index: int):
     """Read frames from webcam and display them."""
     cap = cv.VideoCapture(camera_index)
+    cap.set(cv.CAP_PROP_FOURCC, cv.VideoWriter.fourcc(*'MJPG'))
+    cap.set(cv.CAP_PROP_FRAME_WIDTH, WIDTH)
+    cap.set(cv.CAP_PROP_FRAME_HEIGHT, HEIGHT)
+    cap.set(cv.CAP_PROP_FPS, FPS)
 
     if not cap.isOpened():
         raise RuntimeError(f"Cannot open webcam: {camera_index}")
