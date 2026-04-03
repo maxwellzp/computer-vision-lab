@@ -16,6 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def read_video_from_file(video_path: Path):
+    """Read a video file using OpenCV and display it."""
     cap = cv.VideoCapture(str(video_path))
 
     if not cap.isOpened():
