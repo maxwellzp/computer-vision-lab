@@ -1,0 +1,12 @@
+8 bit representation
+2^8 = 2×2×2×2×2×2×2×2 = 256
+Min value: 0 (black)
+Max value: 255 (white)
+
+
+BGR pixel = [B(0-255), G(0-255), R(0-255)]
+
+Image dimension
+Dim: (M,N,3)
+M - height, y
+N - width, x
