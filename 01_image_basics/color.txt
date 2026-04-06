@@ -1,0 +1,4 @@
+OpenCV HSV range:
+H: Hue (0-179) - Type of color
+S: Saturation (0-255) - Concentration of the color
+V: Value (0-255) - Intensity of the color
