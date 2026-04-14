@@ -5,7 +5,7 @@ import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Image → Grayscale → Blur → Otsu Threshold → Contours → Filtering → Bounding Boxes
+# Image -> Grayscale -> Blur -> Otsu Threshold -> Contours -> Filtering -> Bounding Boxes
 
 
 def read_image(image_path: Path) -> np.ndarray:
@@ -41,15 +41,15 @@ def contours(img: np.ndarray):
 
     plt.figure(figsize=(10, 4))
 
-    plt.subplot(131)
+    plt.subplot(221)
     plt.title("Original")
     plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
 
-    plt.subplot(132)
+    plt.subplot(222)
     plt.title("Threshold")
     plt.imshow(thresh, cmap="gray")
 
-    plt.subplot(133)
+    plt.subplot(223)
     plt.title("Contours")
     plt.imshow(cv.cvtColor(draw_img, cv.COLOR_BGR2RGB))
 
